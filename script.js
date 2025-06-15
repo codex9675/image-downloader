@@ -71,4 +71,13 @@ const FeatchApi = async (search, page) => {
   });
 };
 
+searchValue.addEventListener("keypress", (e) => {
+  if ((e.key = "Enter")) {
+    image.innerHTML = "";
+    page = 1;
+    SearchName = searchValue.value.trim();
+    FeatchApi(SearchName, page);
+  }
+});
+
 FeatchApi(SearchName, page);
