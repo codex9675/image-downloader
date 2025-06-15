@@ -300,7 +300,7 @@ footer ul li a:hover {
   .bars {
     position: relative;
     left: 240px;
-    bottom: 40px;
+    top: -34px;
   }
 
   .cancele {
