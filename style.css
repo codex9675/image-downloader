@@ -1,0 +1,263 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: sans-serif;
+}
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  width: 60%;
+  max-width: 600px;
+}
+.logo img {
+  height: 50px;
+}
+nav {
+  background-color: rgb(253, 242, 233);
+  height: 100px;
+  padding: 25px 60px;
+}
+#search {
+  height: 40px;
+  max-width: 1100px;
+  margin: 10px 10px 0px 20px;
+  width: 100%;
+  background-color: #79797970;
+  border: none;
+  border-radius: 20px;
+  padding: 0 15px;
+  font-size: 16px;
+  outline: none;
+}
+
+#search:focus {
+  background-color: rgb(253, 242, 233);
+  border: 1px solid rgba(0, 0, 0, 0.171);
+}
+
+nav ul {
+  display: flex;
+  justify-content: end;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  margin: 0px 50px 0px 0px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.search-Btn {
+  border: none;
+  width: 320px;
+  height: 40px;
+  margin: 10px 10px;
+  font-size: 15px;
+  background-color: rgb(230, 126, 34);
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.4s ease;
+  box-shadow: 0px 5px 11px rgba(0, 0, 0, 0.363);
+}
+.search-Btn:hover {
+  font-weight: 700;
+  border: 1px solid red;
+  color: black;
+  background-color: transparent;
+}
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin: 150px auto;
+  text-align: center;
+  border-radius: 20px;
+  justify-content: center;
+  position: relative;
+  gap: 30px;
+  height: auto;
+}
+
+.cards {
+  position: relative;
+  display: none;
+  left: 80px;
+  bottom: 170px;
+  width: 150px;
+  background-color: rgb(207, 113, 31);
+  border: none;
+  height: 50px;
+  border-radius: 20px;
+  z-index: 10;
+  transition: 0.4s ease;
+  color: white;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.wrapper:hover .cards {
+  display: block;
+}
+
+.cards:hover {
+  background-color: #202020c2;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+.image-style {
+  object-fit: cover;
+  height: 300px;
+  border-radius: 20px;
+  width: 100%;
+}
+.lode-more {
+  position: relative;
+  z-index: 100;
+}
+
+.load-more-btn {
+  display: block;
+  margin: -50px auto 30px auto;
+  border-radius: 20px;
+  border: none;
+  width: 50%;
+  height: 50px;
+  background-color: #0f82ee;
+  font-size: 15px;
+  font-weight: 700;
+  color: white;
+  transition: 0.4s ease;
+}
+
+.load-more-btn:hover {
+  background-color: transparent;
+  color: black;
+  border: 1px solid red;
+}
+
+footer {
+  background-color: #217286;
+  width: 80%;
+  border-radius: 20px;
+  height: 90px;
+  padding: 34px;
+  margin: 150px auto 20px auto;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+}
+footer ul li {
+  margin: 0px 60px;
+}
+
+footer ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.4s ease;
+}
+
+footer ul li a:hover {
+  font-size: 20px;
+  color: rgb(207, 113, 31);
+  margin: 5px 5px 5px 5px;
+}
+@media only screen and (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: rgb(247, 247, 246);
+    padding: 20px;
+    margin-top: 15px;
+    z-index: 100;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: -20px;
+    transition: left 0.5s ease;
+    left: -100%;
+  }
+
+  nav ul li {
+    bottom: 500px;
+    margin: 10px auto;
+    position: relative;
+  }
+  nav ul li a {
+    font-size: 30px;
+    color: rgb(48, 48, 48);
+
+    transition: 0.4s ease;
+  }
+
+  nav ul li a:hover {
+    color: rgb(207, 113, 31);
+  }
+  nav ul.open {
+    left: 0; /* Slide in */
+  }
+
+  nav ul.active {
+    display: block;
+  }
+
+  .logo {
+    display: flex;
+    width: 90%;
+    max-width: 600px;
+  }
+
+  #search {
+    width: 100%;
+  }
+  .menu-icon i {
+    font-size: 28px; /* Bigger icon */
+    color: #000000; /* Make it clearly visible */
+    cursor: pointer; /* Show pointer on hover */
+  }
+  .cancele {
+    position: relative;
+    z-index: 100;
+  }
+}
+
+@media only screen and (max-width: 568px) {
+  .cards {
+    position: relative;
+    left: 150px;
+  }
+  footer ul li {
+    font-size: 20px;
+    margin: 0 20px;
+  }
+}
